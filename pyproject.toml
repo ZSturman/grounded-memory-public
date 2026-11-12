@@ -1,0 +1,33 @@
+[project]
+name = "grounded-memory"
+version = "0.2.0"
+description = "Local experience-driven world learning from perception and fallible teaching"
+requires-python = ">=3.12,<3.13"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.20", "httpx>=0.28,<1", "numpy>=2,<3", "opencv-python-headless>=4.10", "pillow>=11", "aiortc>=1.14,<2"]
+
+[project.optional-dependencies]
+models = ["torch>=2.5", "transformers>=4.48,<5", "mlx-whisper>=0.4; sys_platform == 'darwin'", "sam-2 @ git+https://github.com/facebookresearch/sam2.git"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["backend/grounded_memory"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+# Retained donor code stays byte-identical to its source (docs/MIGRATIONS.md).
+extend-exclude = ["backend/grounded_memory/vendor"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

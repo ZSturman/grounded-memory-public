@@ -1,0 +1,10 @@
+title = "Public snapshot secret scanning"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Browser preference name, not an authentication secret"
+condition = "AND"
+paths = ['''web/src/app/workspaces/guideModel\.ts$''']
+regexTarget = "secret"
+regexes = ['''^gm\.guidance\.v1$''']

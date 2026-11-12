@@ -1,0 +1,46 @@
+name: GroundedMemory
+options:
+  bundleIdPrefix: com.zacharysturman.groundedmemory
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+packages:
+  GroundedKit:
+    path: Packages/GroundedKit
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: YOURTEAMID
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.2.0"
+    CURRENT_PROJECT_VERSION: "4"
+    GENERATE_INFOPLIST_FILE: true
+    ENABLE_USER_SCRIPT_SANDBOXING: true
+
+targets:
+  GroundedMemory:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+    dependencies:
+      - package: GroundedKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zacharysturman.groundedmemory
+        PRODUCT_NAME: Grounded Memory
+        TARGETED_DEVICE_FAMILY: "1"
+    info:
+      path: Generated/GroundedMemory-Info.plist
+      properties:
+        CFBundleDisplayName: Grounded Memory
+        UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
+        UIRequiredDeviceCapabilities: [arkit]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSCameraUsageDescription: Grounded Memory shows your camera to your own Mac so it can ask what things are and remember your answers. Frames and recordings go only to the Mac you pair with.
+        NSMicrophoneUsageDescription: Grounded Memory sends room audio only to your paired Mac to learn sounds and events, and preserves the original recording.
+        NSLocalNetworkUsageDescription: Grounded Memory finds and talks to your Mac running make phone on this Wi-Fi network.
+        NSBonjourServices: [_groundedmemory._tcp]

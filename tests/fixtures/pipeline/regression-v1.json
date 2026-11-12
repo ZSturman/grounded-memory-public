@@ -1,0 +1,640 @@
+{
+  "records": [
+    {
+      "raw": {
+        "id": "test-current",
+        "source_id": "test-source-current",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Garage key is in the blue drawer."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Garage key is in the blue drawer.",
+        "fact_keys": [
+          "test-location"
+        ],
+        "status": "current",
+        "valid_from": 10,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "test-past",
+        "source_id": "test-source-past",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Garage key was in the hall basket."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Garage key was in the hall basket.",
+        "fact_keys": [
+          "test-location"
+        ],
+        "status": "historical",
+        "valid_from": 0,
+        "valid_until": 10
+      }
+    },
+    {
+      "raw": {
+        "id": "test-broken",
+        "source_id": "test-source-broken",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Workshop light is broken."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Workshop light is broken.",
+        "fact_keys": [
+          "test-condition"
+        ],
+        "status": "contested",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "test-working",
+        "source_id": "test-source-working",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Workshop light is working."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Workshop light is working.",
+        "fact_keys": [
+          "test-condition"
+        ],
+        "status": "contested",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "test-plan",
+        "source_id": "test-source-plan",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Roof inspection is scheduled for Friday."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Roof inspection is scheduled for Friday.",
+        "fact_keys": [
+          "test-plan"
+        ],
+        "status": "current",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "test-duplicate",
+        "source_id": "test-source-duplicate",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "test-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Roof inspection is scheduled for Friday."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Roof inspection is scheduled for Friday.",
+        "fact_keys": [
+          "test-plan"
+        ],
+        "status": "current",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-current",
+        "source_id": "regression-source-current",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Garden hose is in the blue drawer."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Garden hose is in the blue drawer.",
+        "fact_keys": [
+          "regression-location"
+        ],
+        "status": "current",
+        "valid_from": 10,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-past",
+        "source_id": "regression-source-past",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Garden hose was in the hall basket."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Garden hose was in the hall basket.",
+        "fact_keys": [
+          "regression-location"
+        ],
+        "status": "historical",
+        "valid_from": 0,
+        "valid_until": 10
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-broken",
+        "source_id": "regression-source-broken",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Porch sensor is broken."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Porch sensor is broken.",
+        "fact_keys": [
+          "regression-condition"
+        ],
+        "status": "contested",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-working",
+        "source_id": "regression-source-working",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Porch sensor is working."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Porch sensor is working.",
+        "fact_keys": [
+          "regression-condition"
+        ],
+        "status": "contested",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-plan",
+        "source_id": "regression-source-plan",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Fence painting is scheduled for Friday."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Fence painting is scheduled for Friday.",
+        "fact_keys": [
+          "regression-plan"
+        ],
+        "status": "current",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "regression-duplicate",
+        "source_id": "regression-source-duplicate",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Fence painting is scheduled for Friday."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Fence painting is scheduled for Friday.",
+        "fact_keys": [
+          "regression-plan"
+        ],
+        "status": "current",
+        "valid_from": null,
+        "valid_until": null
+      }
+    },
+    {
+      "raw": {
+        "id": "train-one",
+        "source_id": "train-one",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "train-one"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Seed tray is beside the window."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Seed tray is beside the window.",
+        "fact_keys": [
+          "train-one"
+        ]
+      }
+    },
+    {
+      "raw": {
+        "id": "validation-one",
+        "source_id": "validation-one",
+        "source_kind": "synthetic-teaching",
+        "source_timestamp": 0,
+        "group_ids": [
+          "validation-one"
+        ],
+        "origin": "human",
+        "payload": {
+          "text": "Bicycle helmet is in the cupboard."
+        }
+      },
+      "annotation": {
+        "actor": "fixture-reviewer",
+        "method": "human",
+        "reviewed": true,
+        "text": "Bicycle helmet is in the cupboard.",
+        "fact_keys": [
+          "validation-one"
+        ]
+      }
+    }
+  ],
+  "spec": {
+    "name": "synthetic-reviewed-recall-v1",
+    "assignments": {
+      "test-current": "test",
+      "test-past": "test",
+      "test-broken": "test",
+      "test-working": "test",
+      "test-plan": "test",
+      "test-duplicate": "test",
+      "regression-current": "regression",
+      "regression-past": "regression",
+      "regression-broken": "regression",
+      "regression-working": "regression",
+      "regression-plan": "regression",
+      "regression-duplicate": "regression",
+      "train-one": "train",
+      "validation-one": "validation"
+    },
+    "cases": [
+      {
+        "id": "test-current",
+        "split": "test",
+        "query": "Garage key",
+        "expected_ids": [
+          "test-current"
+        ],
+        "categories": [
+          "accuracy",
+          "temporal",
+          "grounding"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ]
+      },
+      {
+        "id": "test-past",
+        "split": "test",
+        "query": "Garage key basket",
+        "expected_ids": [
+          "test-past"
+        ],
+        "categories": [
+          "temporal"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ],
+        "as_of": 5
+      },
+      {
+        "id": "test-conflict",
+        "split": "test",
+        "query": "Workshop light",
+        "expected_ids": [
+          "test-broken",
+          "test-working"
+        ],
+        "categories": [
+          "contradiction"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ],
+        "expected_uncertain": true
+      },
+      {
+        "id": "test-merge",
+        "split": "test",
+        "query": "Roof inspection",
+        "expected_ids": [
+          "test-plan",
+          "test-duplicate"
+        ],
+        "categories": [
+          "consolidation",
+          "grounding"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ],
+        "expected_hit_count": 1
+      },
+      {
+        "id": "test-unknown",
+        "split": "test",
+        "query": "test quantum marmalade",
+        "expected_ids": [],
+        "categories": [
+          "grounding"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ]
+      },
+      {
+        "id": "test-privacy",
+        "split": "test",
+        "query": "Garage key blue",
+        "expected_ids": [],
+        "categories": [
+          "privacy"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ],
+        "allowed_sources": []
+      },
+      {
+        "id": "test-sources",
+        "split": "test",
+        "query": "Garage Workshop",
+        "expected_ids": [
+          "test-current",
+          "test-broken",
+          "test-working"
+        ],
+        "categories": [
+          "retrieval"
+        ],
+        "group_ids": [
+          "test-conversation"
+        ],
+        "expected_uncertain": true
+      },
+      {
+        "id": "regression-current",
+        "split": "regression",
+        "query": "Garden hose",
+        "expected_ids": [
+          "regression-current"
+        ],
+        "categories": [
+          "accuracy",
+          "temporal",
+          "grounding"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ]
+      },
+      {
+        "id": "regression-past",
+        "split": "regression",
+        "query": "Garden hose basket",
+        "expected_ids": [
+          "regression-past"
+        ],
+        "categories": [
+          "temporal"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "as_of": 5
+      },
+      {
+        "id": "regression-conflict",
+        "split": "regression",
+        "query": "Porch sensor",
+        "expected_ids": [
+          "regression-broken",
+          "regression-working"
+        ],
+        "categories": [
+          "contradiction"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "expected_uncertain": true
+      },
+      {
+        "id": "regression-merge",
+        "split": "regression",
+        "query": "Fence painting",
+        "expected_ids": [
+          "regression-plan",
+          "regression-duplicate"
+        ],
+        "categories": [
+          "consolidation",
+          "grounding"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "expected_hit_count": 1
+      },
+      {
+        "id": "regression-unknown",
+        "split": "regression",
+        "query": "regression quantum marmalade",
+        "expected_ids": [],
+        "categories": [
+          "grounding"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ]
+      },
+      {
+        "id": "regression-privacy",
+        "split": "regression",
+        "query": "Garden hose blue",
+        "expected_ids": [],
+        "categories": [
+          "privacy"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "allowed_sources": []
+      },
+      {
+        "id": "regression-sources",
+        "split": "regression",
+        "query": "Garden Porch",
+        "expected_ids": [
+          "regression-current",
+          "regression-broken",
+          "regression-working"
+        ],
+        "categories": [
+          "retrieval"
+        ],
+        "group_ids": [
+          "regression-conversation"
+        ],
+        "expected_uncertain": true
+      },
+      {
+        "id": "train-one",
+        "split": "train",
+        "query": "Seed tray is beside the window.",
+        "expected_ids": [
+          "train-one"
+        ],
+        "categories": [
+          "retrieval"
+        ],
+        "group_ids": [
+          "train-one"
+        ]
+      },
+      {
+        "id": "validation-one",
+        "split": "validation",
+        "query": "Bicycle helmet is in the cupboard.",
+        "expected_ids": [
+          "validation-one"
+        ],
+        "categories": [
+          "retrieval"
+        ],
+        "group_ids": [
+          "validation-one"
+        ]
+      }
+    ],
+    "reviewer": "fixture-reviewer",
+    "purpose": "synthetic-regression",
+    "evaluation_time": 20
+  }
+}
